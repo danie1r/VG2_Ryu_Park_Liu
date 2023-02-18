@@ -337,6 +337,8 @@
 "Assets/Low Poly Guns/Scripts/GunView.cs"
 "Assets/PBRVelociraptor/Scripts/BlendShapeTrigger.cs"
 "Assets/PBRVelociraptor/Scripts/RaptorSoundEffects.cs"
+"Assets/Script/DinoMovement.cs"
+"Assets/Script/DinoSpawn.cs"
 "Assets/Script/Interfaces/IDamageable.cs"
 "Assets/Script/PlayerShoot.cs"
 "Assets/Script/Scriptable Objects/GunData.cs"
