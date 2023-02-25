@@ -6,7 +6,8 @@ public class DinoMovement : MonoBehaviour
 {
     public Transform target;
     public Rigidbody rb;
-    public float force;
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +16,7 @@ public class DinoMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 to = target.position - transform.position;
-        to = to.normalized;
-        to = to * force;
-        rb.AddForce(to);
+        Vector3 to = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
+        rb.MovePosition(to);
     }
 }
