@@ -35,7 +35,7 @@ public class Reset : MonoBehaviour
             count++;
         }
 
-        if (count >= 10)
+        if (count >= 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
