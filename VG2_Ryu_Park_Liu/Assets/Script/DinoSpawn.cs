@@ -19,7 +19,7 @@ public class DinoSpawn : MonoBehaviour
 
     IEnumerator DinoSpawnFunc()
     {
-        while (dinoCount < 16)
+        while (dinoCount < 4)
         {
             xPos = Random.Range(-45, 95);
             zPos = Random.Range(-48, 98);
