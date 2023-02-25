@@ -108,6 +108,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -334,6 +335,10 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.AI.Navigation.Updater.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.ProBuilder.AddOns.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.ProBuilder.AssetIdRemapUtility.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.ProBuilder.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.ProBuilder.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.TextMeshPro.ref.dll"
@@ -356,7 +361,10 @@
 "Assets/Reset.cs"
 "Assets/Script/DinoMovement.cs"
 "Assets/Script/DinoSpawn.cs"
+"Assets/Script/Door.cs"
 "Assets/Script/Interfaces/IDamageable.cs"
+"Assets/Script/Key.cs"
+"Assets/Script/PlayerController.cs"
 "Assets/Script/PlayerShoot.cs"
 "Assets/Script/Scriptable Objects/GunData.cs"
 "Assets/Script/Shooting/GunSystem.cs"
