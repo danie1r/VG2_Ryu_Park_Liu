@@ -108,7 +108,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -354,6 +353,7 @@
 "Assets/Flooded_Grounds/Scripts/FPSController/CharController_Motor.cs"
 "Assets/Flooded_Grounds/Scripts/FPSDisplay.cs"
 "Assets/Flooded_Grounds/Scripts/WaterFloat.cs"
+"Assets/MainMenu.cs"
 "Assets/PBRPachycephalasaurus/Scripts/BoneheadSoundEffects.cs"
 "Assets/PBRPachycephalasaurus/Scripts/Bonehead_BodyEffects.cs"
 "Assets/PBRVelociraptor/Scripts/BlendShapeTrigger.cs"
@@ -362,6 +362,7 @@
 "Assets/Script/DinoMovement.cs"
 "Assets/Script/DinoSpawn.cs"
 "Assets/Script/Door.cs"
+"Assets/Script/InteractEnd.cs"
 "Assets/Script/Interfaces/IDamageable.cs"
 "Assets/Script/Key.cs"
 "Assets/Script/PlayerController.cs"
@@ -369,6 +370,7 @@
 "Assets/Script/Scriptable Objects/GunData.cs"
 "Assets/Script/Shooting/GunSystem.cs"
 "Assets/Script/Shooting/ProjectileGunTutorial.cs"
+"Assets/Script/Shooting/SimpleRayCast.cs"
 "Assets/StarterAssets/FirstPersonController/Scripts/BasicRigidBodyPush.cs"
 "Assets/StarterAssets/FirstPersonController/Scripts/FirstPersonController.cs"
 "Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs"
