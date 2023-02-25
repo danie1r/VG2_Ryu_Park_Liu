@@ -7,9 +7,19 @@ public class DinoMovement : MonoBehaviour
     public Transform target;
     public Rigidbody rb;
     public float speed;
+    private float health;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        health = 100;
+    }
+    public void TakeDamage()
+    {
+        health -= 40;
+        if (health < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
