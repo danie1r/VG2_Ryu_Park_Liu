@@ -40,6 +40,12 @@ namespace DinoGame
                         {
                             targetdoor.Interact();
                         }
+
+                        InteractEnd dna = hit.transform.GetComponent<InteractEnd>();
+                        if (dna)
+                        {
+                            dna.Interact();
+                        }
                     }
                 }
             }
