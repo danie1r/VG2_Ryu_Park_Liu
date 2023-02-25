@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1283,6 +1283,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4302905282055901155, guid: d617ba1fd30aa664b9e8b69ee2ef7a7c, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: a0fd3e22eaa8dfa4bb1601fe8b25d953, type: 3}
+    - target: {fileID: 4302905282055901155, guid: d617ba1fd30aa664b9e8b69ee2ef7a7c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5bec384a71ced6848b10b6486ea7141f, type: 2}
     - target: {fileID: 6142063610455433881, guid: d617ba1fd30aa664b9e8b69ee2ef7a7c, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1986,12 +1994,12 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!135 &2111990000
-SphereCollider:
+  m_CollisionDetection: 1
+--- !u!65 &2111990008
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2009,7 +2017,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2146093595
 PrefabInstance:
@@ -2064,6 +2072,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1466418447808750038, guid: 6761509ab734f0b46838eba6ca08c9cf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466418447808750038, guid: 6761509ab734f0b46838eba6ca08c9cf, type: 3}
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
@@ -2083,7 +2095,7 @@ PrefabInstance:
       addedObject: {fileID: 2111989992}
     - targetCorrespondingSourceObject: {fileID: 1772353503318334649, guid: 6761509ab734f0b46838eba6ca08c9cf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2111990000}
+      addedObject: {fileID: 2111990008}
   m_SourcePrefab: {fileID: 100100000, guid: 6761509ab734f0b46838eba6ca08c9cf, type: 3}
 --- !u!1001 &850772410633638441
 PrefabInstance:
