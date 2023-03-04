@@ -4357,7 +4357,6 @@ GameObject:
   - component: {fileID: 1224146760563774808}
   - component: {fileID: 7024065143563106244}
   - component: {fileID: 7024065143563106268}
-  - component: {fileID: 7024065143563106252}
   m_Layer: 0
   m_Name: Pachycephalasaurus
   m_TagString: Untagged
@@ -4387,7 +4386,7 @@ Transform:
   - {fileID: 7998137320295702381}
   - {fileID: 609374528187739700}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &3815423078931571781
 LODGroup:
@@ -4658,21 +4657,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7024065143563106252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8782815416544512398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7526d4a0157f41a0bbdaf3fe90d3b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  rb: {fileID: 7024065143563106244}
-  speed: 0
 --- !u!1 &8830429947908782031
 GameObject:
   m_ObjectHideFlags: 0

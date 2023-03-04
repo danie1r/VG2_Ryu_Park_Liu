@@ -16,22 +16,9 @@ public class Reset : MonoBehaviour
     // Update is called once per frame
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Raptor"){
-            count++;
-        }
-
-        if (collision.gameObject.name == "Pachycephalasaurus")
+        if(collision.gameObject.GetComponent<DinoMovement>())
         {
-            count++;
-        }
-
-        if (collision.gameObject.name == "Raptor(Clone)")
-        {
-            count++;
-        }
-
-        if (collision.gameObject.name == "Pachycephalasaurus(Clone)")
-        {
+            print("collided");
             count++;
         }
 
