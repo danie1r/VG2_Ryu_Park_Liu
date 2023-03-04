@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1122,7 +1122,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22032
+  m_Name: pb_Mesh41032
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3131,6 +3131,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2657303470384345278, guid: 08ed1a5d8e7d941c4bf1a8e8648ff13a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5bec384a71ced6848b10b6486ea7141f, type: 2}
     - target: {fileID: 5362274970334354884, guid: 08ed1a5d8e7d941c4bf1a8e8648ff13a, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -3588,7 +3592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262140188772635444, guid: ebae5be2ab48b4606b07fe353b58f8b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.521
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8262140188772635444, guid: ebae5be2ab48b4606b07fe353b58f8b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3618,6 +3622,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8440798790679065825, guid: ebae5be2ab48b4606b07fe353b58f8b9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8782815416544512398, guid: ebae5be2ab48b4606b07fe353b58f8b9, type: 3}
       propertyPath: m_Name
       value: Pachycephalasaurus
@@ -3629,10 +3637,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8782815416544512398, guid: ebae5be2ab48b4606b07fe353b58f8b9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8180635849075133045}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebae5be2ab48b4606b07fe353b58f8b9, type: 3}
 --- !u!1 &7162878001135857947 stripped
 GameObject:
@@ -3644,29 +3649,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2540281265426350081, guid: c4117e1eec6164991a1b43cc5a3d2f41, type: 3}
   m_PrefabInstance: {fileID: 1651290988}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &8180635849075133045
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772353501517551266}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8960495160473121917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
