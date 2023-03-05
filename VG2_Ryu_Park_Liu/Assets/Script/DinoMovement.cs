@@ -3,34 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class DinoMovement : MonoBehaviour
+namespace DinoGame
 {
-    public Transform target;
-    NavMeshAgent navAgent;
-    private float health;
-    // Start is called before the first frame update
-    void Awake()
+    public class DinoMovement : MonoBehaviour
     {
-        health = 100;
-    }
-    void Start()
-    {
-        navAgent = GetComponent<NavMeshAgent>();
-    }
+        public Transform target;
+        NavMeshAgent navAgent;
+        // Start is called before the first frame update
+        void Awake()
+        {
 
-    void Update()
-    {
-        if (target)
-        {
-            navAgent.SetDestination(target.position);
         }
-    }
-    public void TakeDamage()
-    {
-        health -= 40;
-        if (health < 0)
+        void Start()
         {
-            Destroy(gameObject);
+            navAgent = GetComponent<NavMeshAgent>();
+        }
+
+        void Update()
+        {
+            if (target)
+            {
+                navAgent.SetDestination(target.position);
+            }
         }
     }
 }
+

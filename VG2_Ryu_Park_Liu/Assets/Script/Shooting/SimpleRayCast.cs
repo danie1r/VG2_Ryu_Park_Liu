@@ -2,36 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
-
-public class SimpleRayCast : MonoBehaviour
+namespace DinoGame
 {
-
-    void Update()
+    public class SimpleRayCast : MonoBehaviour
     {
-        if(Input.GetMouseButtonUp(0))
+        public int dinoKillCount;
+        public TMP_Text killCount;
+        
+        void Start()
         {
-            // mouse position in world space
-            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100f));
-
-            // direction vector from camera pos to mouse pos
-            Vector3 direction = worldMousePosition - Camera.main.transform.position;
-
-            RaycastHit hit;
-
-            if(Physics.Raycast(Camera.main.transform.position, direction, out hit, 100f))
+            dinoKillCount = 0;
+            killCount.text = "Kill Count: " + dinoKillCount.ToString();
+        }
+        void Update()
+        {
+            if (Input.GetMouseButtonUp(0))
             {
-                Debug.DrawLine(Camera.main.transform.position, hit.point, Color.green, 1f);
+                // mouse position in world space
+                Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100f));
 
-                if(hit.collider.gameObject.tag == "Enemy")
+                // direction vector from camera pos to mouse pos
+                Vector3 direction = worldMousePosition - Camera.main.transform.position;
+
+                RaycastHit hit;
+
+                if (Physics.Raycast(Camera.main.transform.position, direction, out hit, 100f))
                 {
-                Destroy(hit.transform.gameObject);
-                }
-                else{
-                    Debug.Log("Not an enemy");
-                }
-            }
+                    Debug.DrawLine(Camera.main.transform.position, hit.point, Color.green, 1f);
 
+                    if (hit.collider.gameObject.tag == "Enemy")
+                    {
+                        dinoKillCount++;
+                        killCount.text = "Kill Count: " + dinoKillCount.ToString();
+                        Destroy(hit.transform.gameObject);
+                    }
+                    else
+                    {
+                        Debug.Log("Not an enemy");
+                    }
+                }
+
+            }
         }
     }
+
 }

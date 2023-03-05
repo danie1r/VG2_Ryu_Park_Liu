@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InteractEnd : MonoBehaviour
+namespace DinoGame
 {
-    public void Interact()
+    public class InteractEnd : MonoBehaviour
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        public void Interact()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
+

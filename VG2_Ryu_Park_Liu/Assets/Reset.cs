@@ -14,17 +14,17 @@ public class Reset : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.GetComponent<DinoMovement>())
-        {
-            print("collided");
-            count++;
-        }
+    //public void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.GetComponent<DinoMovement>())
+    //    {
+    //        print("collided");
+    //        count++;
+    //    }
 
-        if (count >= 1)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
+    //    if (count >= 1)
+    //    {
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //    }
+    //}
 }
