@@ -361,6 +361,7 @@
 "Assets/PBRVelociraptor/Scripts/BlendShapeTrigger.cs"
 "Assets/PBRVelociraptor/Scripts/RaptorSoundEffects.cs"
 "Assets/Reset.cs"
+"Assets/Script/CollisionDetect.cs"
 "Assets/Script/DinoMovement.cs"
 "Assets/Script/DinoSpawn.cs"
 "Assets/Script/Door.cs"
