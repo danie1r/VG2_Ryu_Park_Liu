@@ -23,6 +23,10 @@ namespace DinoGame
             keyIdsObtained = new List<int>();
             currentLocation = transform;
         }
+        private void OnCollisionEnter(Collision collision)
+        {
+            print("hello");
+        }
         // Start is called before the first frame update
         void Start()
         {

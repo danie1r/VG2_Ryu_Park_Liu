@@ -16,7 +16,7 @@ namespace DinoGame
         public int xPos1;
         public int zPos1;
         public int dinoCount;
-        public int[] waveNumList = { 1, 2, 3, 4 };
+        public int[] waveNumList = { 5, 10, 15, 20 };
         public int index = 0;
         void Awake()
         {

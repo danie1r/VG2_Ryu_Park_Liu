@@ -2597,7 +2597,7 @@ Transform:
   - {fileID: 297912712117112367}
   - {fileID: 6245929414965831036}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -102.516, z: 0}
 --- !u!95 &8017667669531143524
 Animator:

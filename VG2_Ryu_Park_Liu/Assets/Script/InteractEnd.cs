@@ -9,7 +9,7 @@ namespace DinoGame
     {
         public void Interact()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(2);
         }
         // Start is called before the first frame update
         void Start()
