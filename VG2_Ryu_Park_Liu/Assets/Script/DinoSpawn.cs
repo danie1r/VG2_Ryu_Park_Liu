@@ -16,8 +16,10 @@ namespace DinoGame
         public int xPos1;
         public int zPos1;
         public int dinoCount;
-        public int[] waveNumList = { 1, 2, 3, 4 };
+        public int[] waveNumList = { 5, 10, 15, 20 };
         public int index = 0;
+        public bool timerRunning = true;
+        float timeRemain = 30;
         void Awake()
         {
 
@@ -30,22 +32,38 @@ namespace DinoGame
 
         public void SpawnAgain()
         {
-            if (index < waveNumList.Length)
+
+            if (timerRunning)
+            {
+                if (timeRemain > 0)
+                {
+                    timeRemain -= Time.deltaTime;
+                    waveText.text = "Time until next wave: " + timeRemain.ToString();
+                }
+                else
+                {
+                    timerRunning = false;
+                    timeRemain = 30;
+                }
+
+            }
+            else if (index < waveNumList.Length)
             {
                 dinoCount = waveNumList[index];
-
+                waveText.text = "Wave Level: " + (index + 1).ToString();
                 StartCoroutine(DinoSpawnFunc());
                 index++;
+                timerRunning = true;
             }
             else
             {
                 waveText.text = "Wave Complete!";
             }
         }
-        void Update()
-        {
-            waveText.text = "Wave Level: " + (index).ToString();
-        }
+        //void Update()
+        //{
+        //    waveText.text = "Wave Level: " + (index).ToString();
+        //}
         IEnumerator DinoSpawnFunc()
         {
             while (dinoCount > 0)
