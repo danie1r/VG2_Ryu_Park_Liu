@@ -19,7 +19,7 @@ namespace DinoGame
         public int[] waveNumList = { 5, 10, 15, 20 };
         public int index = 0;
         public bool timerRunning = true;
-        float timeRemain = 30;
+        float timeRemain = 1;
         void Awake()
         {
 
