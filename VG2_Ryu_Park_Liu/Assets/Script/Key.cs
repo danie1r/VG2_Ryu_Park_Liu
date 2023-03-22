@@ -8,7 +8,7 @@ namespace DinoGame
     public class Key : MonoBehaviour
     {
         public int id;
-        private string keyName = "Church Back Door";
+        public string keyName = "Church Back Door";
         public TMP_Text keyList;
 
         void OnTriggerEnter(Collider other)
