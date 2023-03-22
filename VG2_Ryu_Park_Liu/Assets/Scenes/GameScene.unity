@@ -35348,13 +35348,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.619, y: 2.253, z: -0.010000001}
   m_TimeToStationary: 0.5
+--- !u!114 &811626449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811626441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9b9df6d8ed24274b5a6845e7cef234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &890286238
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41608
+  m_Name: pb_Mesh42018
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -36100,6 +36112,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 132574, guid: 0894e59934291c64d9041c5d75db1750, type: 3}
       insertIndex: -1
       addedObject: {fileID: 811626445}
+    - targetCorrespondingSourceObject: {fileID: 132574, guid: 0894e59934291c64d9041c5d75db1750, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 811626449}
   m_SourcePrefab: {fileID: 100100000, guid: 0894e59934291c64d9041c5d75db1750, type: 3}
 --- !u!1 &1143506325
 GameObject:
@@ -37366,6 +37381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  keyList: {fileID: 1281099239}
 --- !u!20 &1845228713 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
@@ -37475,6 +37491,7 @@ MonoBehaviour:
   dinoCount: 0
   waveNumList: 050000000a0000000f00000014000000
   index: 0
+  timerRunning: 1
 --- !u!4 &1919430876
 Transform:
   m_ObjectHideFlags: 0
