@@ -8,7 +8,7 @@ namespace DinoGame
     public class Key : MonoBehaviour
     {
         public int id;
-        private string name = "Church Back Door";
+        private string keyName = "Church Back Door";
         public TMP_Text keyList;
 
         void OnTriggerEnter(Collider other)
@@ -17,7 +17,7 @@ namespace DinoGame
             PlayerController targetPlayer = other.GetComponent<PlayerController>();
             if (targetPlayer != null)
             {
-                keyList.text = keyList.text + "<br>" + name;
+                keyList.text = keyList.text + "<br>" + keyName;
                 targetPlayer.keyIdsObtained.Add(id);
 
                 Destroy(gameObject);
