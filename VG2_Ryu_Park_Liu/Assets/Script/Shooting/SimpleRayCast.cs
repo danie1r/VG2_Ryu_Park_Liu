@@ -15,7 +15,7 @@ namespace DinoGame
         void Start()
         {
             dinoKillCount = 0;
-            killCount.text = "Kill Count: " + dinoKillCount.ToString();
+            killCount.text = "Kill Points: " + dinoKillCount.ToString();
         }
         void Update()
         {
@@ -33,10 +33,15 @@ namespace DinoGame
                 {
                     Debug.DrawLine(Camera.main.transform.position, hit.point, Color.green, 1f);
 
-                    if (hit.collider.gameObject.tag == "Enemy")
+                    GameObject hitObject = hit.collider.gameObject;
+                    if (hitObject.tag == "Enemy")
                     {
-                        dinoKillCount++;
-                        killCount.text = "Kill Count: " + dinoKillCount.ToString();
+                        //We can differentiate points for different dinosaurs here
+                        if (hitObject.name.Contains("Raptor 1"))
+                        {
+                            dinoKillCount += 100;
+                        }
+                        killCount.text = "Kill Points: " + dinoKillCount.ToString();
                         Destroy(hit.transform.gameObject);
                     }
                     else

@@ -7,7 +7,7 @@ namespace DinoGame
     public class Door : MonoBehaviour
     {
         Animator animator;
-        public int keyIdRequired = -1;
+        public int keyIdRequired = 1;
 
         void Awake()
         {
@@ -16,12 +16,14 @@ namespace DinoGame
 
         public void Interact()
         {
-            bool shouldOpen = true;
+            bool shouldOpen = false;
             bool keyRequired = keyIdRequired >= 0;
-            bool keyMissing = !PlayerController.instance.keyIdsObtained.Contains(keyIdRequired);
+           
+            bool keyMissing = PlayerController.instance.keyIdsObtained.Contains(keyIdRequired);
+            print(keyMissing);
             if (keyRequired && keyMissing)
             {
-                shouldOpen = false;
+                shouldOpen = true;
             }
 
             if (shouldOpen)

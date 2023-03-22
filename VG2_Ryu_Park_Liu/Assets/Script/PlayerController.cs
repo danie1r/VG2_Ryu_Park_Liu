@@ -65,7 +65,11 @@ namespace DinoGame
             }
         }
 
-       
+        //void OnCollisionEnter(Collision collision)
+        //{
+        //    print("hello");
+        //}
+
     }
 }
 
