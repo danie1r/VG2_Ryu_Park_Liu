@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChurchDoorCollision : MonoBehaviour
 {
+    public int health = 1000;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,10 +14,16 @@ public class ChurchDoorCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health < 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        print("door collided");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            health -= 10;
+        }
     }
 }
