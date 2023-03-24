@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 namespace DinoGame
 {
@@ -11,11 +12,14 @@ namespace DinoGame
     {
         public int dinoKillCount;
         public TMP_Text killCount;
+
+        public Boolean death;
         
         void Start()
         {
             dinoKillCount = 0;
             killCount.text = "Kill Points: " + dinoKillCount.ToString();
+            death = false;
         }
         void Update()
         {
@@ -42,6 +46,7 @@ namespace DinoGame
                             dinoKillCount += 100;
                         }
                         killCount.text = "Kill Points: " + dinoKillCount.ToString();
+                        death = true;
                         Destroy(hit.transform.gameObject);
                     }
                     else
