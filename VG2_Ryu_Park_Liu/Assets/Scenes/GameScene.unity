@@ -35562,7 +35562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732274991}
   - component: {fileID: 732274992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37121,7 +37121,7 @@ GameObject:
   - component: {fileID: 1397082166}
   - component: {fileID: 1397082168}
   - component: {fileID: 1397082167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50268,7 +50268,7 @@ GameObject:
   - component: {fileID: 8888418507635196336}
   - component: {fileID: 8880525858639916564}
   - component: {fileID: 8870335821743023886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50286,7 +50286,7 @@ GameObject:
   - component: {fileID: 8888834915742976146}
   - component: {fileID: 8880523891937696646}
   - component: {fileID: 8871806338833499432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50304,7 +50304,7 @@ GameObject:
   - component: {fileID: 8882548478641617708}
   - component: {fileID: 8880263725179855206}
   - component: {fileID: 8871775588071289126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_FusionCore1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50322,7 +50322,7 @@ GameObject:
   - component: {fileID: 8882555296675306138}
   - component: {fileID: 8877258659986283796}
   - component: {fileID: 8871644192845036400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Clip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50340,7 +50340,7 @@ GameObject:
   - component: {fileID: 8888865423727930566}
   - component: {fileID: 8880429322101353084}
   - component: {fileID: 8870104674557002100}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50358,7 +50358,7 @@ GameObject:
   - component: {fileID: 8888791842846451990}
   - component: {fileID: 8879996017329883754}
   - component: {fileID: 8870049253474198778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50376,7 +50376,7 @@ GameObject:
   - component: {fileID: 8882304208602764650}
   - component: {fileID: 8877343003917624122}
   - component: {fileID: 8872067631544564438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_FusionCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50394,7 +50394,7 @@ GameObject:
   - component: {fileID: 8882292527651435622}
   - component: {fileID: 8880897151483070270}
   - component: {fileID: 8871703311946138898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50412,7 +50412,7 @@ GameObject:
   - component: {fileID: 8882510332745387806}
   - component: {fileID: 8880272095846157666}
   - component: {fileID: 8870168518362330246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50430,7 +50430,7 @@ GameObject:
   - component: {fileID: 8882781756113324626}
   - component: {fileID: 8877367503140184444}
   - component: {fileID: 8871598765821226934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50447,7 +50447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8888821749461905918}
   - component: {fileID: 765423884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sniper_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50465,7 +50465,7 @@ GameObject:
   - component: {fileID: 8888906138129920264}
   - component: {fileID: 8880453856476795584}
   - component: {fileID: 8870062375512904126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S_Clip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50509,8 +50509,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8885500705192022402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.446, y: -0.158, z: 0.62}
+  m_LocalRotation: {x: -0.016386397, y: -0.00021818277, z: -0.011651184, w: 0.9997978}
+  m_LocalPosition: {x: 0.16324711, y: -0.16391361, z: 0.6402761}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50528,7 +50528,7 @@ Transform:
   - {fileID: 1397082166}
   m_Father: {fileID: 1845228716}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.878, y: -0.003, z: -1.335}
 --- !u!4 &8888834915742976146
 Transform:
   m_ObjectHideFlags: 0
