@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.AI;
 using TMPro;
 
 namespace DinoGame
@@ -16,10 +16,11 @@ namespace DinoGame
         public int xPos1;
         public int zPos1;
         public int dinoCount;
-        public int[] waveNumList = { 5, 10, 15, 20 };
+        public int[] waveNumList = { 10, 15, 20, 30 };
+        public int speed = 5;
         public int index = 0;
         public bool timerRunning = true;
-        float timeRemain = 1;
+        float timeRemain = 5;
         void Awake()
         {
 
@@ -28,6 +29,7 @@ namespace DinoGame
         void Start()
         {
             dinosaur.GetComponent<DinoMovement>().target = FindObjectOfType<PlayerController>().transform;
+
         }
 
         public void SpawnAgain()
@@ -38,12 +40,12 @@ namespace DinoGame
                 if (timeRemain > 0)
                 {
                     timeRemain -= Time.deltaTime;
-                    waveText.text = "Time until next wave: " + timeRemain.ToString();
+                    waveText.text = "Time until next wave: " + Mathf.Round(timeRemain).ToString();
                 }
                 else
                 {
                     timerRunning = false;
-                    timeRemain = 30;
+                    timeRemain = 10;
                 }
 
             }
@@ -57,28 +59,26 @@ namespace DinoGame
             }
             else
             {
-                waveText.text = "Wave Complete!";
+                waveText.text = "Wave Complete! Game Clear";
             }
         }
-        //void Update()
-        //{
-        //    waveText.text = "Wave Level: " + (index).ToString();
-        //}
+       
         IEnumerator DinoSpawnFunc()
         {
             while (dinoCount > 0)
             {
+                //dinosaur.GetComponent<NavMeshAgent>().speed = speedList[index];
                 xPos = Random.Range(-47, 8);
                 zPos = Random.Range(-47, 68);
                 xPos1 = Random.Range(19, 83);
                 zPos1 = Random.Range(40, 90);
-                Instantiate(dinosaur, new Vector3(xPos, yPos, zPos), Quaternion.identity);
-                //Instantiate(dinosaur, new Vector3(-45, yPos, zPos), Quaternion.identity);
-                //Instantiate(dinosaur, new Vector3(93, yPos, zPos), Quaternion.identity);
-                //Instantiate(dinosaur, new Vector3(xPos1, yPos, zPos1), Quaternion.identity);
-                yield return new WaitForSeconds(4f);
+                GameObject dinoCopy = Instantiate(dinosaur, new Vector3(xPos, yPos, zPos), Quaternion.identity);
+                dinoCopy.GetComponent<NavMeshAgent>().speed = speed; 
+                yield return new WaitForSeconds(0.7f);
                 dinoCount -= 1;
+
             }
+            speed += 2;
 
         }
     }

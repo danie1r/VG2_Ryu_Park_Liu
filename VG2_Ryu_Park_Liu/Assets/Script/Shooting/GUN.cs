@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using TMPro;
 namespace DinoGame{
     public class GUN : MonoBehaviour
     {
@@ -10,7 +10,7 @@ namespace DinoGame{
         public float range = 100f;
         public float fireRate = 15f;
         public float ammoCount = 20f;
-
+        public TMP_Text ammoText;
         public Camera fpsCam;
         public ParticleSystem muzzleFlash;
 
@@ -29,6 +29,7 @@ namespace DinoGame{
             {
                 ammoCount = 20f;
             }
+            ammoText.text = "Ammo Left: " + ammoCount.ToString() + "/20";
         }
 
         void Shoot()

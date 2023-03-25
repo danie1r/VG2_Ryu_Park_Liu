@@ -6,6 +6,15 @@ namespace DinoGame{
     public class WeaponSwitching : MonoBehaviour
     {
         public int currentWeapon = 0;
+        public static WeaponSwitching instance;
+        public bool rifle;
+        public bool sniper;
+        void Awake()
+        {
+            instance = this;
+            rifle = false;
+            sniper = false;
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -22,12 +31,12 @@ namespace DinoGame{
                 currentWeapon = 0;
             }
 
-            if(Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+            if(Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2 && rifle)
             {
                 currentWeapon = 1;
             }
 
-            if(Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+            if(Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3 && sniper)
             {
                 currentWeapon = 2;
             }

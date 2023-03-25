@@ -15,22 +15,18 @@ namespace DinoGame{
         // public TMP_Text killCount;
 
         public float health = 50f;
-        public Boolean isDead;
         Animator animator;
-
+        public PlayerController player;
 
         private void Start()
         {
             animator = gameObject.GetComponent<Animator>();
-            isDead = false;
+            player = FindObjectOfType<PlayerController>();
         }
 
         private void Update()
         {
-            //if (isDead)
-            //{
-            //    Destroy(gameObject);
-            //}
+
         }
 
 
@@ -45,6 +41,8 @@ namespace DinoGame{
                 //isDead = true;
                 animator.SetBool("Death", true);
                 gameObject.GetComponent<NavMeshAgent>().enabled = false;
+                gameObject.GetComponent<Rigidbody>().detectCollisions = false;
+                player.dinoKillCount += 100;
                 Destroy(gameObject, 2);
             }
         }

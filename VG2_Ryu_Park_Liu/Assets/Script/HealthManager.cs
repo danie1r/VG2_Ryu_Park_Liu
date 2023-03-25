@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace DinoGame
 {
@@ -33,6 +34,11 @@ namespace DinoGame
             if (life > 0)
             {
                 life--;
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                return;
             }
             alphaColor.a += .1f;
             damageScreen.color = alphaColor;
