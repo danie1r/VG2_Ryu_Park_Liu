@@ -76,7 +76,7 @@ namespace DinoGame
                 //Instantiate(dinosaur, new Vector3(-45, yPos, zPos), Quaternion.identity);
                 //Instantiate(dinosaur, new Vector3(93, yPos, zPos), Quaternion.identity);
                 //Instantiate(dinosaur, new Vector3(xPos1, yPos, zPos1), Quaternion.identity);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(4f);
                 dinoCount -= 1;
             }
 
