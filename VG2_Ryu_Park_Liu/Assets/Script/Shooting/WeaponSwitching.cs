@@ -27,6 +27,11 @@ namespace DinoGame{
                 currentWeapon = 1;
             }
 
+            if(Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+            {
+                currentWeapon = 2;
+            }
+
             if(previousWeapon != currentWeapon)
             {
                 SelectWeapon();

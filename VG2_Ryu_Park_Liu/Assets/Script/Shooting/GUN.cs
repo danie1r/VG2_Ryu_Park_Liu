@@ -9,6 +9,7 @@ namespace DinoGame{
         public float damage = 10f;
         public float range = 100f;
         public float fireRate = 15f;
+        public float ammoCount = 20f;
 
         public Camera fpsCam;
         public ParticleSystem muzzleFlash;
@@ -23,20 +24,28 @@ namespace DinoGame{
                 nexTimetoFire = Time.time + 1f/fireRate;
                 Shoot();
             }
+
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                ammoCount = 20f;
+            }
         }
 
         void Shoot()
         {
-            muzzleFlash.Play();
-            RaycastHit hit;
-            if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-            {
-                Debug.Log(hit.transform.name);
-
-                Target target = hit.transform.GetComponent<Target>();
-                if(target != null)
+            if(ammoCount > 0){
+                muzzleFlash.Play();
+                RaycastHit hit;
+                ammoCount -= 1;
+                if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
                 {
-                    target.TakeDamage(damage);
+                    Debug.Log(hit.transform.name);
+
+                    Target target = hit.transform.GetComponent<Target>();
+                    if(target != null)
+                    {
+                        target.TakeDamage(damage);
+                    }
                 }
             }
         }
