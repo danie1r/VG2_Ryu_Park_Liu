@@ -93,6 +93,11 @@ namespace DinoGame
                 spawner.GetComponent<DinoSpawn>().SpawnAgain();
             }
 
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseMenu.instance.Show();
+            }
+
 
         }
 

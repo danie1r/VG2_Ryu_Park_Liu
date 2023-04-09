@@ -9,8 +9,8 @@ public class PauseMenu : MonoBehaviour
     public static PauseMenu instance;
 
     public GameObject mainMenu;
-    public GameObject settingsMenu;
-    public Slider volumeSlider;
+    //public GameObject settingsMenu;
+    //public Slider volumeSlider;
 
     void Awake()
     {
@@ -31,30 +31,30 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void Switchmenu(GameObject someMenu)
+    void SwitchMenu(GameObject someMenu)
     {
         mainMenu.SetActive(false);
-        settingsMenu.SetActive(false);
+        //settingsMenu.SetActive(false);
 
         someMenu.SetActive(true);
     }
 
     public void ShowMainMenu()
     {
-        Switchmenu(mainMenu);
+        SwitchMenu(mainMenu);
     }
 
-    public void ShowSettingsMenu()
-    {
-        Switchmenu(settingsMenu);
-    }
+    //public void ShowSettingsMenu()
+    //{
+    //    SwitchMenu(settingsMenu);
+    //}
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+    //public void PlayGame()
+    //{
+    //    SceneManager.LoadScene(1);
+    //}
 
-    public void StartScreen()
+    public void Restart()
     {
         SceneManager.LoadScene(0);
     }
