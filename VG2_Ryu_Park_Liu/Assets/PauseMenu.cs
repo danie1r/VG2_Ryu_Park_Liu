@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         Time.timeScale = 1;
+        print("Resume working");
     }
 
     void SwitchMenu(GameObject someMenu)
@@ -57,5 +58,6 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(0);
+        print("Restart working");
     }
 }

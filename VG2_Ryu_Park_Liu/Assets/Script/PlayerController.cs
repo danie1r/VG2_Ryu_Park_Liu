@@ -99,6 +99,8 @@ namespace DinoGame
             }
 
 
+            //GetComponent.FirstPersonController.enable == false;
+
         }
 
         //public void BuyRifle()
