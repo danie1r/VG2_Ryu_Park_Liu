@@ -69550,7 +69550,7 @@ Camera:
   far clip plane: 500
   field of view: 40
   orthographic: 1
-  orthographic size: 3.36
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -69574,7 +69574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731164424}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 91.60371, y: 20, z: -27.34306}
+  m_LocalPosition: {x: 91.60371, y: 24.48, z: -27.34306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72701,11 +72701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveText: {fileID: 969379496}
   dinosaur: {fileID: 4005143028897149453, guid: da6f2cb1651a94577bc8d9536aecfa1a, type: 3}
-  xPos: 0
-  yPos: 1
-  zPos: 0
-  xPos1: 0
-  zPos1: 0
   dinoCount: 4
   waveNumList: 050000000a0000000f00000014000000
   speed: 5
@@ -87997,7 +87992,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dinosaur: {fileID: 4005143028897149453, guid: da6f2cb1651a94577bc8d9536aecfa1a, type: 3}
   keyIdsObtained: 
-  waveText: {fileID: 969379496}
   spawner: {fileID: 1919430874}
   dinoKillCount: 0
   dinoPointText: {fileID: 312012672}
