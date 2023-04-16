@@ -44,15 +44,13 @@ namespace DinoGame
             damageScreen.color = alphaColor;
         }
 
-        public void Heal()
+        public void Heal(int amount)
         {
             if (life < maxLife)
             {
-                life++;
+                life += amount;
+                Debug.Log("Heal Working");
             }
-
-            alphaColor.a -= .1f;
-            damageScreen.color = alphaColor;
         }
     }
 }

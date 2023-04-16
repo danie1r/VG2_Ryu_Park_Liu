@@ -21,6 +21,10 @@ namespace DinoGame{
         public Camera fpsCam;
         public ParticleSystem muzzleFlash;
 
+        // sound
+        public AudioSource shootingAudio;
+        public AudioSource reloadingAudio;
+
         private float nexTimetoFire = 0f;
 
         // Update is called once per frame
@@ -44,6 +48,7 @@ namespace DinoGame{
         {
             if(currentClip > 0){
                 muzzleFlash.Play();
+                shootingAudio.Play();
                 RaycastHit hit;
                 currentClip -= 1;
                 if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -61,6 +66,7 @@ namespace DinoGame{
 
         public void Reload() {
             int reloadAmount = maxClip - currentClip;
+            reloadingAudio.Play();
             reloadAmount = (currentAmmo - reloadAmount) >= 0 ? reloadAmount : currentAmmo;
             currentClip += reloadAmount;
             currentAmmo -= reloadAmount;
