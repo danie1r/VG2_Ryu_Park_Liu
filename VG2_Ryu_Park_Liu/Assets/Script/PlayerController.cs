@@ -13,7 +13,6 @@ namespace DinoGame
         public GameObject dinosaur;
         public static PlayerController instance;
         public List<int> keyIdsObtained;
-        public TMP_Text waveText;
         public GameObject spawner;
         public int dinoKillCount;
         public TMP_Text dinoPointText;

@@ -10,11 +10,6 @@ namespace DinoGame
     {
         public TMP_Text waveText;
         public GameObject dinosaur;
-        public int xPos;
-        public int yPos = 0;
-        public int zPos;
-        public int xPos1;
-        public int zPos1;
         public int dinoCount;
         public int[] waveNumList = { 10, 15, 20, 30 };
         public int speed = 5;
@@ -68,14 +63,18 @@ namespace DinoGame
             while (dinoCount > 0)
             {
                 //dinosaur.GetComponent<NavMeshAgent>().speed = speedList[index];
-                xPos = Random.Range(-47, 8);
-                zPos = Random.Range(-47, 68);
-                xPos1 = Random.Range(19, 83);
-                zPos1 = Random.Range(40, 90);
+                int xPos = -47;
+                int yPos = 0;
+                int zPos = -17;
+                int xPos1 = -47;
+                int yPos1 = 0;
+                int zPos1 = -17;
                 GameObject dinoCopy = Instantiate(dinosaur, new Vector3(xPos, yPos, zPos), Quaternion.identity);
-                dinoCopy.GetComponent<NavMeshAgent>().speed = speed; 
+                GameObject dinoCopy1 = Instantiate(dinosaur, new Vector3(xPos1, yPos1, zPos1), Quaternion.identity);
+                dinoCopy.GetComponent<NavMeshAgent>().speed = speed;
+                dinoCopy1.GetComponent<NavMeshAgent>().speed = speed;
                 yield return new WaitForSeconds(0.7f);
-                dinoCount -= 1;
+                dinoCount -= 2;
 
             }
             speed += 2;
