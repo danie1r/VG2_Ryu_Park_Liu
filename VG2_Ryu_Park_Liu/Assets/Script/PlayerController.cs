@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 namespace DinoGame
 {
@@ -92,9 +93,29 @@ namespace DinoGame
                 spawner.GetComponent<DinoSpawn>().SpawnAgain();
             }
 
+
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 PauseMenu.instance.Show();
+                
+            }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                PauseMenu.instance.Hide();
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                PauseMenu.instance.Restart();
+
+            }
+
+
+            if (isPaused)
+            {
+                return;
             }
 
 

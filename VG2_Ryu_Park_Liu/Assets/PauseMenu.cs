@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DinoGame;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -23,6 +25,12 @@ public class PauseMenu : MonoBehaviour
         ShowMainMenu();
         gameObject.SetActive(true);
         Time.timeScale = 0;
+        PlayerController.instance.isPaused = true;
+
+
+        //GetComponent<StarterAssetsInputs>().SetCursorState(false); 
+        //GetComponent<StarterAssetsInputs>().cursorInputForLook = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Hide()
@@ -30,6 +38,16 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(false);
         Time.timeScale = 1;
         print("Resume working");
+
+        if(PlayerController.instance != null)
+        {
+            PlayerController.instance.isPaused = false;
+        }
+
+        //GetComponent<StarterAssetsInputs>().SetCursorState(true);
+        //GetComponent<StarterAssetsInputs>().cursorInputForLook = true;
+        Cursor.lockState = CursorLockMode.None;
+
     }
 
     void SwitchMenu(GameObject someMenu)
