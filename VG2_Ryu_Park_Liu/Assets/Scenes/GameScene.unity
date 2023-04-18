@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.54308796, g: 0.59300995, b: 0.55959505, a: 1}
+  m_IndirectSpecularColor: {r: 0.54310364, g: 0.59291863, b: 0.55971074, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -55680,6 +55680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10744408f25f50c4498aa87869a50aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstperson: {fileID: 8960495160473121941}
   mainMenu: {fileID: 1892774695}
 --- !u!65 &1325553770
 BoxCollider:
@@ -77907,6 +77908,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6b911390c5825014e8377183a7837d3f, type: 2}
+    - target: {fileID: 5420857361349278248, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: analogMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: MoveSpeed
       value: 10
@@ -79980,7 +79985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &4567538987741832698
 GameObject:
   m_ObjectHideFlags: 0
@@ -88177,7 +88182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &8885534474876503460
 GameObject:
   m_ObjectHideFlags: 0
@@ -88403,3 +88408,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 850772410633638441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8960495160473121941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 850772410633638441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960495160473121917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

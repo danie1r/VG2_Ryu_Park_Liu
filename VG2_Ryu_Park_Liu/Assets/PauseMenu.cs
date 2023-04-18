@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu instance;
 
+    public FirstPersonController firstperson;
+
     public GameObject mainMenu;
     //public GameObject settingsMenu;
     //public Slider volumeSlider;
@@ -30,7 +32,8 @@ public class PauseMenu : MonoBehaviour
 
         //GetComponent<StarterAssetsInputs>().SetCursorState(false); 
         //GetComponent<StarterAssetsInputs>().cursorInputForLook = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
+        firstperson.enabled = false;
     }
 
     public void Hide()
@@ -46,7 +49,9 @@ public class PauseMenu : MonoBehaviour
 
         //GetComponent<StarterAssetsInputs>().SetCursorState(true);
         //GetComponent<StarterAssetsInputs>().cursorInputForLook = true;
-        Cursor.lockState = CursorLockMode.None;
+        firstperson.enabled = true;
+        // Cursor.lockState = CursorLockMode.None;
+        
 
     }
 

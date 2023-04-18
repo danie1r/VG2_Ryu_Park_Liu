@@ -58,6 +58,9 @@ namespace DinoGame
             //{
             //    return;
             //}
+
+            
+            
             dinoPointText.text = "Points: " + (dinoKillCount).ToString();
             //weaponPointsText.text = dinoPointText.text;
 
@@ -112,11 +115,13 @@ namespace DinoGame
 
             }
 
-
             if (isPaused)
             {
                 return;
             }
+
+
+            
 
 
             //GetComponent.FirstPersonController.enable == false;
