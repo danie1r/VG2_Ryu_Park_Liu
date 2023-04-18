@@ -80,7 +80,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log(SceneManager.GetActiveScene().name);
         print("Restart working");
     }
 }
