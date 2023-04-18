@@ -18,10 +18,16 @@ namespace DinoGame{
         Animator animator;
         public PlayerController player;
 
+        MeshRenderer meshRenderer;
+        Color originalColor;
+        float flashTime = .15f;
+
         private void Start()
         {
             animator = gameObject.GetComponent<Animator>();
             player = FindObjectOfType<PlayerController>();
+            meshRenderer = GetComponent<MeshRenderer>();
+            originalColor = meshRenderer.material.color;
         }
 
         private void Update()
@@ -32,6 +38,7 @@ namespace DinoGame{
 
         public void TakeDamage(float amount)
         {
+            FlashStart();
             animator.SetBool("Death", false);
             health -= amount;
             if(health <= 0f)
@@ -45,6 +52,17 @@ namespace DinoGame{
                 player.dinoKillCount += 100;
                 Destroy(gameObject, 2);
             }
+        }
+
+        void FlashStart()
+        {
+            meshRenderer.material.color = Color.red;
+            Invoke("FlashStop", flashTime);
+        }
+
+        void FlashStop()
+        {
+            meshRenderer.material.color = originalColor;
         }
 
         // void OnDestroy()
