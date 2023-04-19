@@ -10,8 +10,11 @@ namespace DinoGame
     {
         public TMP_Text waveText;
         public GameObject dinosaur;
-        public int dinoCount;
-        public int[] waveNumList = { 10, 15, 20, 30 };
+        public GameObject pachy;
+
+        private int dinoCount;
+        private int pachyCount;
+        public List<int[]> waveNumList = new List<int[]> { new int[] { 1, 8 }, new int[] { 4, 6 }, new int[] { 5, 6 } };
         public int speed = 5;
         public int index = 0;
         public bool timerRunning = true;
@@ -24,7 +27,7 @@ namespace DinoGame
         void Start()
         {
             dinosaur.GetComponent<DinoMovement>().target = FindObjectOfType<PlayerController>().transform;
-
+            pachy.GetComponent<DinoMovement>().target = FindObjectOfType<PlayerController>().transform;
         }
 
         public void SpawnAgain()
@@ -42,11 +45,11 @@ namespace DinoGame
                     timerRunning = false;
                     timeRemain = 10;
                 }
-
             }
-            else if (index < waveNumList.Length)
+            else if (index < waveNumList.Count)
             {
-                dinoCount = waveNumList[index];
+                dinoCount = waveNumList[index][0];
+                pachyCount = waveNumList[index][1];
                 waveText.text = "Wave Level: " + (index + 1).ToString();
                 StartCoroutine(DinoSpawnFunc());
                 index++;
@@ -60,21 +63,28 @@ namespace DinoGame
        
         IEnumerator DinoSpawnFunc()
         {
-            while (dinoCount > 0)
+            while (dinoCount > 0 || pachyCount > 0)
             {
                 //dinosaur.GetComponent<NavMeshAgent>().speed = speedList[index];
-                int xPos = -47;
-                int yPos = 0;
-                int zPos = -17;
-                int xPos1 = -47;
-                int yPos1 = 0;
-                int zPos1 = -17;
-                GameObject dinoCopy = Instantiate(dinosaur, new Vector3(xPos, yPos, zPos), Quaternion.identity);
-                GameObject dinoCopy1 = Instantiate(dinosaur, new Vector3(xPos1, yPos1, zPos1), Quaternion.identity);
-                dinoCopy.GetComponent<NavMeshAgent>().speed = speed;
-                dinoCopy1.GetComponent<NavMeshAgent>().speed = speed;
+                if (dinoCount > 0){
+                    int xPos = -47;
+                    int yPos = 0;
+                    int zPos = -17;
+                    GameObject dinoCopy = Instantiate(dinosaur, new Vector3(xPos, yPos, zPos), Quaternion.identity);
+                    dinoCopy.GetComponent<NavMeshAgent>().speed = speed;
+                    dinoCount -= 1;
+                }
+                
+                if (pachyCount > 0){
+                    int xPos1 = -47;
+                    int yPos1 = 0;
+                    int zPos1 = -17;
+                    GameObject pachyCopy = Instantiate(pachy, new Vector3(xPos1, yPos1, zPos1), Quaternion.identity);
+                    pachyCopy.GetComponent<NavMeshAgent>().speed = speed;
+                    pachyCount -= 1;
+                }
                 yield return new WaitForSeconds(0.7f);
-                dinoCount -= 2;
+                
 
             }
             speed += 2;
