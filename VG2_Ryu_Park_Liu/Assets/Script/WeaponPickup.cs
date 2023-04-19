@@ -42,16 +42,16 @@ namespace DinoGame
                 } 
                 else if (gameObject.name.Contains("Rifle"))
                 {
-                    if (PlayerController.instance.dinoKillCount - 1000 >= 0)
+                    if (PlayerController.instance.dinoKillCount - 700 >= 0)
                     {
                         alertMessage.text = "";
                         WeaponSwitching.instance.rifle = true;
-                        PlayerController.instance.dinoKillCount -= 1000;
+                        PlayerController.instance.dinoKillCount -= 700;
                         Destroy(gameObject);
                     }
                     else
                     {
-                        alertMessage.text = "You must have over 1000 points to use the Rifle";
+                        alertMessage.text = "You must have over 700 points to use the Rifle";
                     }
 
                 }

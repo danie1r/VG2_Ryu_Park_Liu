@@ -37,7 +37,9 @@ namespace DinoGame
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(2);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 return;
             }
             alphaColor.a += .1f;
@@ -52,7 +54,9 @@ namespace DinoGame
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(2);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 return;
             }
             alphaColor.a += .1f;

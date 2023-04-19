@@ -20,13 +20,6 @@ namespace DinoGame
         public Image minimap;
         private bool mapExpand = false;
         private Transform originalPosition;
-        //public TMP_Text weaponPointsText; //points text displayed in weapons menu
-        //public TMP_Text NoPointAlert;
-        //public Button RifleButton;
-        //public TMP_Text RifleText;
-
-        //public Button SniperButton;
-        //public TMP_Text SniperText;
 
         public bool isPaused;   
         public Transform currentLocation;
@@ -47,27 +40,9 @@ namespace DinoGame
         // Update is called once per frame
         void Update()
         {
-            //if (Input.GetKeyDown(KeyCode.Escape))
-            //{
-            //    if (!isPaused)
-            //    {
-            //        MenuController.instance.Show();
-            //    }
-            //    else
-            //    {
-            //        MenuController.instance.Hide();
-            //    }
-            //}
-            //if (isPaused)
-            //{
-            //    return;
-            //}
-
             
             
             dinoPointText.text = "Points: " + (dinoKillCount).ToString();
-            //weaponPointsText.text = dinoPointText.text;
-
             Keyboard keyboardInput = Keyboard.current;
             Mouse mouseInput = Mouse.current;
             if (keyboardInput != null && mouseInput != null)
@@ -144,48 +119,7 @@ namespace DinoGame
                 return;
             }
 
-
-            
-
-
-            //GetComponent.FirstPersonController.enable == false;
-
         }
-
-        //public void BuyRifle()
-        //{
-        //    print("Clicked");
-        //    if (dinoKillCount - 1000 < 0)
-        //    {
-        //        NoPointAlert.enabled = true;
-        //    }
-        //    else
-        //    {
-        //        NoPointAlert.enabled = false;
-        //        dinoKillCount -= 1000;
-        //        RifleButton.interactable = false;
-        //        RifleText.text = "Bought!";
-        //        weaponPointsText.text = "Points: " + (dinoKillCount).ToString();
-        //    }
-
-        //}
-
-        //public void BuySniper()
-        //{
-        //    if (dinoKillCount - 1500 < 0)
-        //    {
-        //        NoPointAlert.enabled = true;
-        //    }
-        //    else
-        //    {
-        //        NoPointAlert.enabled = false;
-        //        dinoKillCount -= 1500;
-        //        SniperButton.interactable = false;
-        //        SniperText.text = "Bought!";
-        //        weaponPointsText.text = "Points: " + (dinoKillCount).ToString();
-        //    }
-        //}
-
     }
 }
 

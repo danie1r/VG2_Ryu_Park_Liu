@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChurchDoorCollision : MonoBehaviour
 {
-    public int health = 1000;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {

@@ -53,10 +53,9 @@ namespace DinoGame{
                 currentClip -= 1;
                 if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
                 {
-                    Debug.Log(hit.transform.name);
-
                     Target target = hit.transform.GetComponent<Target>();
-                    if(target != null)
+                    print(hit.collider.GetType().ToString() == "UnityEngine.BoxCollider");
+                    if(target != null && hit.collider.GetType().ToString() == "UnityEngine.BoxCollider") // for all dinos except t-rex
                     {
                         target.TakeDamage(damage);
                     }
