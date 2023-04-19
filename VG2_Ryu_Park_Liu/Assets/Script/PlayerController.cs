@@ -17,7 +17,9 @@ namespace DinoGame
         public GameObject spawner;
         public int dinoKillCount;
         public TMP_Text dinoPointText;
-
+        public Image minimap;
+        private bool mapExpand = false;
+        private Transform originalPosition;
         //public TMP_Text weaponPointsText; //points text displayed in weapons menu
         //public TMP_Text NoPointAlert;
         //public Button RifleButton;
@@ -97,24 +99,41 @@ namespace DinoGame
             }
 
 
+            if (mapExpand && Input.GetKeyDown(KeyCode.M)) // expands the map
+            {
+                Vector3 newScale = new Vector3(1.527926f, 1.527926f, 1.527926f);
+                minimap.transform.localScale = newScale;
+                minimap.transform.localPosition = new Vector3(-536f, -233.81f, 0f);
+                mapExpand = false;
+            } else if (!mapExpand && Input.GetKeyDown(KeyCode.M))
+            {
+                // Debug.Log(minimap.transform.localPosition);
+                Vector3 newScale = new Vector3(4f, 4f, 4f);
+                minimap.transform.localScale = newScale;
+                minimap.transform.localPosition = new Vector3(25f, 0f, 25f);
+                mapExpand = true;
+            }
+
+            
+            
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 PauseMenu.instance.Show();
                 
             }
 
-            if (Input.GetKeyDown(KeyCode.O))
+            if (Input.GetKeyDown(KeyCode.O) && isPaused)
             {
                 PauseMenu.instance.Hide();
 
             }
 
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.P) && isPaused)
             {
                 PauseMenu.instance.Restart();
 
             }
-
+            
             if (isPaused)
             {
                 return;
