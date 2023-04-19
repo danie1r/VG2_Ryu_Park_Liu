@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Enemy
   - Reload
+  - Bald_Dino
   layers:
   - Default
   - TransparentFX

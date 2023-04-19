@@ -27,6 +27,10 @@ namespace DinoGame
             {
                 health.GetComponent<HealthManager>().TakeDamage();
             }
+            if (collision.gameObject.tag == "Bald_Dino")
+            {
+                health.GetComponent<HealthManager>().TakeDamage_Bald();
+            }
         }
     }
 }

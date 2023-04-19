@@ -33,6 +33,21 @@ namespace DinoGame
         {
             if (life > 0)
             {
+                life -= 2;
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                return;
+            }
+            alphaColor.a += .1f;
+            damageScreen.color = alphaColor;
+        }
+
+        public void TakeDamage_Bald()
+        {
+            if (life > 0)
+            {
                 life--;
             }
             else
@@ -50,6 +65,8 @@ namespace DinoGame
             {
                 life += amount;
                 Debug.Log("Heal Working");
+                alphaColor.a = 0f;
+                damageScreen.color = alphaColor;
             }
         }
     }

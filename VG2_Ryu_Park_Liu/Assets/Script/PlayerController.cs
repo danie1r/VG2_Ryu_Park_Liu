@@ -40,6 +40,8 @@ namespace DinoGame
         // Start is called before the first frame update
         void Start()
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         // Update is called once per frame
@@ -119,12 +121,15 @@ namespace DinoGame
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 PauseMenu.instance.Show();
-                
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
 
             if (Input.GetKeyDown(KeyCode.O) && isPaused)
             {
                 PauseMenu.instance.Hide();
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
 
             }
 
